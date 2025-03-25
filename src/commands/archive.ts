@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 
-import { createWriteStream, statSync, unlinkSync } from "fs";
+import { createWriteStream, existsSync, statSync, unlinkSync } from "fs";
 import { getConfigForWorkspace, hasActiveWorkspace } from "../utils";
 import path, { join } from "path";
 
@@ -100,6 +100,10 @@ export const action = async () => {
     if (targetFiles.length === 0) {
         vscode.window.showErrorMessage("No files to archive!");
         return;
+    }
+
+    if (existsSync(workspaceArchiveFilePath)) {
+        unlinkSync(workspaceArchiveFilePath);
     }
 
     let aborted = false;
