@@ -28,7 +28,7 @@
         "commands": [
             {
                 "command": "better-archiver.archive",
-                "title": "Archive Workspace Folder"
+                "title": "Better Archiver: Archive Workspace"
             }
         ],
         "configuration": {
