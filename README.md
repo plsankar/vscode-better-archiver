@@ -2,6 +2,13 @@
 
 Better Archiver is a VS Code extension that zips your workspace folder for easy deployment. With a single command, you can create a zip archive of your project, excluding unnecessary files and ensuring a smooth deployment process.
 
+## Badges
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+![GitHub issues](https://img.shields.io/github/issues/plsankar/vscode-better-archiver)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/plsankar/vscode-better-archiver)
+![Visual Studio Marketplace Version (including pre-releases)](https://img.shields.io/visual-studio-marketplace/v/Lakshmisankar.vscode-better-archiver)
+
 ## Features
 
 -   Zip the entire workspace folder with one command.
@@ -14,6 +21,9 @@ Better Archiver is a VS Code extension that zips your workspace folder for easy 
 2. Go to the Extensions Marketplace (`Ctrl+Shift+X` or `Cmd+Shift+X` on macOS).
 3. Search for **Better Archiver**.
 4. Click **Install**.
+
+Install the extension from the [VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=Lakshmisankar.vscode-better-archiver)
+
 
 ## Usage
 
@@ -37,6 +47,10 @@ You can customize the behavior of Better Archiver in **settings.json**:
 ## Roadmap
 
 -   [ ] Compression level customization.
+
+## Acknowledgements
+
+-   [Node Archiver](https://github.com/archiverjs/node-archiver) and its contributors
 
 ## Contributing
 
