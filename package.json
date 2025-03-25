@@ -1,0 +1,74 @@
+{
+    "name": "better-archiver",
+    "displayName": "Better Archiver",
+    "description": "Archive your workspace folder",
+    "version": "0.0.1",
+    "homepage": "https://github.com/plsankar/vscode-better-archiver",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/plsankar/vscode-better-archiver.git"
+    },
+    "author": {
+        "name": "Lakshmi Sankar",
+        "email": "me@lakshmisankar.com",
+        "url": "https://lakshmisankar.com"
+    },
+    "bugs": {
+        "url": "https://github.com/plsankar/vscode-better-archiver/issues"
+    },
+    "engines": {
+        "vscode": "^1.97.2"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "better-archiver.archive",
+                "title": "Archive Workspace Folder"
+            }
+        ],
+        "configuration": {
+            "title": "Better Archiver",
+            "properties": {
+                "betterArchiver.exclude": {
+                    "type": "array",
+                    "default": [],
+                    "description": "file and folders to exclude from the archive"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "pnpm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "pnpm run compile && pnpm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/archiver": "^6.0.3",
+        "@types/byte-size": "^8.1.2",
+        "@types/lodash.sortby": "^4.7.9",
+        "@types/mocha": "^10.0.6",
+        "@types/node": "18.x",
+        "@types/vscode": "^1.98.0",
+        "@typescript-eslint/eslint-plugin": "^6.19.1",
+        "@typescript-eslint/parser": "^6.19.1",
+        "@vscode/test-cli": "^0.0.4",
+        "@vscode/test-electron": "^2.3.9",
+        "eslint": "^8.56.0",
+        "typescript": "^5.3.3"
+    },
+    "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af",
+    "dependencies": {
+        "archiver": "^7.0.1",
+        "byte-size": "^9.0.1",
+        "glob": "^11.0.1",
+        "lodash.sortby": "^4.7.0"
+    }
+}
